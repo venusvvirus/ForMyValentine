@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffebee;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.note {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.note p {
+    color: #ff4081;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.start-game {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.start-game:hover {
+    transform: scale(1.1);
+}
+
+.game-container {
+    display: none;
+    width: 400px;
+    height: 400px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    animation: float 3s linear;
+    z-index: 1;
+}
+
+@keyframes float {
+    from { bottom: -30px; }
+    to { bottom: 400px; }
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ff4081;
+    z-index: 2;
+}
+
+.timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #ff4081;
+    z-index: 2;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #ff4081;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    z-index: 3;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.restart-button:hover {
+    transform: scale(1.1);
+}
